@@ -1,0 +1,54 @@
+{
+  "deploy-name": "tutorial",
+  "version": 0,
+  "main": "index.jsx",
+  "environment": {
+    "background": {
+      "r": 0.2,
+      "g": 0.2,
+      "b": 0.2,
+      "a": 1
+    },
+    "ambient": {
+      "r": 0.2,
+      "g": 0.2,
+      "b": 0.2,
+      "a": 1
+    },
+    "skybox": {
+      "material": "FXUnlitSkyboxLatlong"
+    }
+  },
+  "camera": {
+    "position": {
+      "x": 694.5460815429688,
+      "y": 151.79745483398438,
+      "z": 692.5790405273438
+    },
+    "orientation": {
+      "w": 0.9421754479408264,
+      "x": -0.051515236496925354,
+      "y": 0.3309978246688843,
+      "z": 0.009595410898327827
+    },
+    "nearClip": 10.000000149011612,
+    "farClip": 10000.0,
+    "fovY": 22.89519413064574
+  },
+  "local": "./resources",
+  "meta": {
+    "affiliation": null,
+    "creator": "sajt"
+  },
+  "description": {
+    "full": null,
+    "short": null
+  },
+  "tags": [],
+  "isPrivate": false,
+  "isPublic": false,
+  "mainTag": null,
+  "name": "tutorial",
+  "price": 0,
+  "thumbnails": []
+}
