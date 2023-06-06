@@ -33,7 +33,7 @@
     },
     "nearClip": 10.000000149011612,
     "farClip": 10000.0,
-    "fovY": 22.89519413064574
+    "fovY": 57.94761922820543
   },
   "local": "./resources",
   "meta": {
@@ -50,5 +50,11 @@
   "mainTag": null,
   "name": "tutorial",
   "price": 0,
-  "thumbnails": []
+  "thumbnails": [],
+  "components": {
+    "ts-vue-skeleton": "./components/mw-ts-vue-skeleton/component.json",
+    "compdev-tutorial-wom-manipulation": "./components/compdev-tutorial-wom-manipulation/component.json",
+    "compdev-tutorial-orbitable-webview": "./components/compdev-tutorial-orbitable-webview/component.json"
+
+  }
 }
