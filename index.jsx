@@ -1,13 +1,29 @@
 <root>
+< ts-vue-skeleton>
+</ts-vue-skeleton>
+
   <node
     position={{ x: 0.0, y: 0.0, z: -0.0 }}
     orientation={{ w: 1.0, x: 0.0, y: 0.0, z: -0.0 }}
     scale={{ x: 1.0, y: 1.0, z: 1.0 }}>
     <mesh
       {...{ url: 'Ground.mesh' }}
-      physical={{ raycast: true, shapes: [{'shape': 'mesh', 'mass': 1, 'offset': {'x': 0, 'y': 0, 'z': 0}, 'rotation': {'w': 1, 'x': 0, 'y': 0, 'z': 0}, 'mesh': 'Ground_phy.obj'}] }}>
+      physical={{ raycast:
+       true,
+       collision: true,
+        shapes: 
+       [{'shape': 'mesh', 'mass': 1, 'offset': {'x': 0, 'y': 0, 'z': 0}, 'rotation': {'w': 1, 'x': 0, 'y': 0, 'z': 0}, 'mesh': 'Ground_phy.obj'}],
+       'link-type': 'kinematic',
+       coefficients: {
+        restitution: 0.7, "linear-damping": 0.1,
+         "angular-damping": 0.1, friction: 0.3,
+         "rolling-friction": 0.01,
+      
+      },
+       
+       }}>
     </mesh>
-  </node>
+  </node> 
   <node
     position={{ x: -1007.2928466796875, y: 425.5755310058594, z: -207.21066284179688 }}
     orientation={{ w: 0.9538615942001343, x: -0.1180105060338974, y: 0.03389810398221016, z: 0.27399373054504395 }}>
@@ -30,7 +46,27 @@
   </node>
   <mesh
       {...{ url: 'VSword.mesh' }}
-      physical={{ raycast: true, shapes: [{'shape': 'mesh', 'mass': 1, 'offset': {'x': 0, 'y': 0, 'z': 0}, 'rotation': {'w': 1, 'x': 0, 'y': 0, 'z': 0}, 'mesh': 'VSword_phy.obj'}] }}
+      physical={{ raycast: true,
+        collision: true,
+        autophysical: true,
+
+         shapes:
+         [{'shape': 'mesh', 'mass': 1, 
+      'offset': {'x': 0, 'y': 0, 'z': 0}, 
+      'rotation': {'w': 1, 'x': 0, 'y': 0, 'z': 0},
+       'mesh': 'VSword_phy.obj'}], 
+       'link-type': 'dynamic',
+       coefficients: {
+        restitution: 0.7, "linear-damping": 0.1,
+         "angular-damping": 0.1, friction: 0.3,
+         "rolling-friction": 0.01,
+        gravity: {
+          x: 0,
+          y: -5.81,
+          z: 0,
+        },
+      },
+      }}
      position={{ x: 36.87318420410156, y: 401.15313720703125, z: -253.83172607421875 }}
     orientation={{ w: 1.0, x: 0.0, y: 0.0, z: -0.0 }}
     scale={{ x: 1.0, y: 1.0, z: 1.0 }}
