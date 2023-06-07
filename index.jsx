@@ -62,10 +62,12 @@
          "rolling-friction": 0.01,
         gravity: {
           x: 0,
-          y: -5.81,
+          y: -9.81,
           z: 0,
         },
       },
+      class: 'animal, dynamic',
+
       }}
      position={{ x: 36.87318420410156, y: 401.15313720703125, z: -253.83172607421875 }}
     orientation={{ w: 1.0, x: 0.0, y: 0.0, z: -0.0 }}
